@@ -1,1 +1,0 @@
-import{c as e,o as t}from"./CW5kGlBE.js";var n=t(t=>{if(sessionStorage.getItem(`stillroom.identity.v1`)!==`studio`)return e({path:`/login`,query:{next:t.path}})});export{n as default};

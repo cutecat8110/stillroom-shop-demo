@@ -1,0 +1,1 @@
+import{c as e,o as t}from"./Dwms1-jH.js";var n=t(t=>{if(sessionStorage.getItem(`stillroom.identity.v1`)!==`studio`)return e({path:`/login`,query:{next:t.path}})});export{n as default};
