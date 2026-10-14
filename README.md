@@ -2,49 +2,41 @@
 
 `Nuxt 4` · `Vue 3` · `TypeScript` · `Element Plus` · `IndexedDB`
 
-編排店面、確認選物、圖片對話，體驗從編輯到選購的完整互動。
+編排店面、挑選商品，再核對組合與贈品，搭配文字及圖片對話。
 
 **[體驗店面編輯](https://cutecat8110.github.io/stillroom-shop-demo/#/editor)** · **[逛逛店面](https://cutecat8110.github.io/stillroom-shop-demo/)**
 
-![店面編輯](docs/images/editor.png)
+![店面編排與即時預覽](docs/images/editor.png)
 
 | 入口 | 代表操作 |
 | --- | --- |
-| [店面編輯](https://cutecat8110.github.io/stillroom-shop-demo/#/editor) | 區塊排序、文字與圖片調整、復原重做、版型保存 |
+| [店面編輯](https://cutecat8110.github.io/stillroom-shop-demo/#/editor) | 區塊排序、圖文調整、復原重做與版型保存 |
 | [商品選購](https://cutecat8110.github.io/stillroom-shop-demo/#/collection) | 分類搜尋、價格排序、規格與庫存 |
-| [購物車](https://cutecat8110.github.io/stillroom-shop-demo/#/carts) | 數量調整、運費試算、單品／組合／贈品確認 |
-| 客服對話 | 文字與圖片、送出前預覽、放大查看、對話保存 |
+| [購物車](https://cutecat8110.github.io/stillroom-shop-demo/#/carts) | 數量、運費及單品／組合／贈品核對 |
+| 右下角「聊聊」 | 文字與圖片、送出前預覽、放大查看 |
 
-**試用順序：** 編排並儲存 → 選購「日常器物組」與單品 → 購物車確認 → 圖片對話。
-登入頁的鑰匙按鈕可帶入帳密。
-
-![選物店面](docs/images/storefront.png)
-![單品、組合與贈品確認](docs/images/shopping.png)
-
-## 實作重點
-
-- 編輯器與店面共用版面元件，支援桌面、平板與手機預覽。
-- 型別化資料操作、交易寫入與版本檢查，避免跨分頁覆蓋。
-- WebP 圖片、非首屏延後載入，編輯與對話元件分開載入。
+**試用：** 點鑰匙登入編輯器 → 編排並儲存 → 選購商品 → 確認選物 → 圖片對話。
 
 <details>
-<summary>共用架構</summary>
+<summary>店面與選物確認</summary>
 
-```mermaid
-flowchart LR
-  A[店面編輯] --> B[共用版面元件]
-  C[選物店面] --> B
-  D[購物車與確認] --> E[資料操作與驗證]
-  F[文字與圖片對話] --> E
-  A --> E
-  E --> G[IndexedDB]
-  G --> C
-```
+![目前選物店面](docs/images/storefront.png)
+![單品、組合內含與贈品](docs/images/shopping.png)
 
 </details>
 
-## 體驗說明
+<details>
+<summary>實作重點</summary>
 
-商品、帳號與對話均為展示資料，保存在目前瀏覽器。選物確認不建立實際訂單，沒有付款、出貨或真人客服；登入並非後端驗證。
+編輯器與店面共用版面元件，支援桌面、平板與手機預覽。WebP 圖片及非首屏延後載入；IndexedDB 交易與版本檢查避免跨分頁覆蓋。
 
-重新整理保留已存內容，選物需重新確認。「重設資料」可恢復初始狀態。圖片僅在瀏覽器內處理，支援 PNG、JPEG、WebP，單張上限 2 MB。
+</details>
+
+<details>
+<summary>使用說明</summary>
+
+商品、帳號與對話為展示資料，保存在目前瀏覽器。確認選物不建立實際訂單，沒有付款、出貨或真人客服；登入並非後端驗證。
+
+重新整理保留已存內容，選物需重新確認。「重設資料」恢復初始狀態。圖片僅在瀏覽器處理，支援 PNG、JPEG、WebP，單張上限 2 MB。
+
+</details>
