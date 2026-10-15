@@ -2,7 +2,7 @@
 
 `Nuxt 4` · `Vue 3` · `TypeScript` · `Element Plus` · `IndexedDB`
 
-編排店面、挑選商品，再核對組合與贈品，搭配文字及圖片對話。
+店面編排、商品選購與組合／贈品核對，支援文字及圖片對話。
 
 **[體驗店面編輯](https://cutecat8110.github.io/stillroom-shop-demo/#/editor)** · **[逛逛店面](https://cutecat8110.github.io/stillroom-shop-demo/)**
 
