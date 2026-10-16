@@ -1,4 +1,4 @@
-# 拾間選物｜店面編輯與購物體驗
+# 商店編輯器
 
 `Nuxt 4` · `Vue 3` · `TypeScript` · `Element Plus` · `IndexedDB`
 
